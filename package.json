@@ -1,0 +1,11 @@
+{
+  "name": "tds-react-autocomplete",
+  "version": "1.0.2",
+  "description": "Auto complete widget",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dhana Tontanahal",
+  "license": "ISC"
+}
