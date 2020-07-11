@@ -29,18 +29,18 @@ function App() {
   return (
     <div className="App">
       <AutoCompleteSearchBox
-        placeHolderSearchLabel={"Search.."} 
-        primaryIndex={"symbol"} //required
-        secondaryIndex={"name"} 
-        showSecondarySearchCriterion={true}
-        secondarySearchClassName="secondarySearchClassName"
-        tertiaryIndex={"price"}
-        showTertiarySearchCriterion={true}
-        tertiarySearchClassName="tertiarySearchClassName"
-        suggestions={stocksData}  //required
-        onClick={onClick}
-        showSearchBtn={true}      
-        searchImg={search}
+        placeHolderSearchLabel={"Search.."} //optional
+        primaryIndex={"symbol"}            //required  
+        secondaryIndex={"name"}            //optional
+        showSecondarySearchCriterion={true}//optional
+        secondarySearchClassName="secondarySearchClassName"//optional
+        tertiaryIndex={"price"}             //optional
+        showTertiarySearchCriterion={true}  //optional
+        tertiarySearchClassName="tertiarySearchClassName" //optional
+        suggestions={stocksData}  //required    
+        onClick={onClick}         //required
+        showSearchBtn={true}      //optional
+        searchImg={search}        //optional
         />
       
     </div>
@@ -51,4 +51,32 @@ export default App;
 
 
 
+```
+
+#If the samle data is like below primary index is the key by which you want the user to search in auto complete corresponding to auto suggestions retrieved pivoted by this key 
+```
+export const stocksData=
+[
+     {
+    "symbol" : "SPY",           //primaryIndex
+    "name" : "SPDR S&P 500",    //secondaryIndex
+    "price" : 315.36,           //tertiaryIndex
+    "exchange" : "NYSE Arca"
+  }, {
+    "symbol" : "CMCSA",
+    "name" : "Comcast Corporation Class A Common Stock",
+    "price" : 39.83,
+    "exchange" : "Nasdaq Global Select"
+  }, {
+    "symbol" : "KMI",
+    "name" : "Kinder Morgan Inc.",
+    "price" : 13.97,
+    "exchange" : "New York Stock Exchange"
+  }, {
+    "symbol" : "INTC",
+    "name" : "Intel Corporation",
+    "price" : 59.215,
+    "exchange" : "Nasdaq Global Select"
+  }...
+  
 ```
