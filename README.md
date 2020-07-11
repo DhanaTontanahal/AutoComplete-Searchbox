@@ -1,10 +1,12 @@
 # AutoComplete-Searchbox
 AutoComplete-Searchbox deployed to npm using React JS
 
-
+#Demo
 ![alt text](https://github.com/DhanaTontanahal/AutoComplete-Searchbox/blob/master/autocompletedemo.PNG)
-npm i tds-react-autocomplete
 
+```
+npm i tds-react-autocomplete
+```
 
 #USAGE:
 
