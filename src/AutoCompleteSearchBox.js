@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import styled from 'styled-components';
-import search from './search.svg';
 
 const StyledNoSuggsDiv = styled.div`
     color: #999;
@@ -81,7 +80,8 @@ li:not(:last-of-type) {
 
 
 const defaultProps = {
-    searchImg:search,
+    placeHolderSearchLabel:"Search",
+    showSearchBtn:false,
     styles: {
         ulDiv:{
             color:"blue"
@@ -253,9 +253,13 @@ class AutoCompleteSearchBox extends Component {
                         onKeyDown={this.onKeyDown}
                         value={userInput}
                     />
-                    <button onClick={this.onClick}>
+                    {
+                        this.props.showSearchBtn?
+                        <button onClick={this.onClick}>
                         <img src={this.props.searchImg} width={styles.searchImage.width} height={styles.searchImage.height} alt={styles.searchImage.alt} />
-                    </button>
+                    </button>:null
+                    }
+                    
                 </StyledContainer>
                 {autoCompleteSuggestions}
             </div>

@@ -60,6 +60,7 @@ var StyledUl = _styledComponents.default.ul(_templateObject3(), function (props)
 });
 
 var defaultProps = {
+  placeHolderSearchLabel: "Search",
   showSearchBtn: false,
   styles: {
     ulDiv: {
